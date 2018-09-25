@@ -11,25 +11,22 @@ button.addEventListener("click", function (e){
     }
     //ADD LINHA
     const linha = document.createElement("li");
-    
-    //ADD COLUNA
-    const colunaTarefa = document.createElement("li");
-
-    //INSERE TEXTO DO INPUT NA COLUNA
-    colunaTarefa.innerHTML = (input.value);
-
-    //ADD COLUNA DENTRO LINHA
-    linha.appendChild(colunaTarefa);
 
 
-    //ADD LINHA DENTRO DA TABLE
+    //INSERE TEXTO DO INPUT NA LINHA
+    linha.innerHTML = (input.value);
+
+    //ADD LINHA DENTRO DA LISTA
     list.appendChild(linha);
     
     //LIMPA INPUT AO ENVIAR INPUT
     input.value = "";
+
+    
+    linha.addEventListener("click", function(e){
+        linha.style.textDecoration = "line-through"
+    })
+    
+    
 })
 
-// const colunaTarefa = document.getElementsByName("td");
-// console.log(colunaTarefa);
-// // colunaTarefa.addEventListener("click", function(){
-// // })
