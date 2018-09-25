@@ -1,6 +1,6 @@
 const button = document.querySelector(".btn-tarefas");
 const input = document.querySelector(".form__input");
-const table = document.querySelector(".table-tarefas");
+const list = document.querySelector(".list-tarefas");
 
 button.addEventListener("click", function (e){
     e.preventDefault();
@@ -10,10 +10,10 @@ button.addEventListener("click", function (e){
         return false;
     }
     //ADD LINHA
-    const linha = document.createElement("tr");
+    const linha = document.createElement("li");
     
     //ADD COLUNA
-    const colunaTarefa = document.createElement("td");
+    const colunaTarefa = document.createElement("li");
 
     //INSERE TEXTO DO INPUT NA COLUNA
     colunaTarefa.innerHTML = (input.value);
@@ -23,13 +23,13 @@ button.addEventListener("click", function (e){
 
 
     //ADD LINHA DENTRO DA TABLE
-    table.appendChild(linha);
+    list.appendChild(linha);
     
     //LIMPA INPUT AO ENVIAR INPUT
     input.value = "";
 })
 
-const colunaTarefa = document.getElementsByName("td");
-console.log(colunaTarefa);
-// colunaTarefa.addEventListener("click", function(){
-// })
+// const colunaTarefa = document.getElementsByName("td");
+// console.log(colunaTarefa);
+// // colunaTarefa.addEventListener("click", function(){
+// // })
