@@ -11,9 +11,9 @@ button.addEventListener("click", function (e){
     }
     //ADD LINHA
     const linha = document.createElement("li");
+    linha.className = "list-item";
 
-
-    //INSERE TEXTO DO INPUT NA LINHA
+    //INSERE TEXTO DO INPUT NA CONST
     linha.innerHTML = (input.value);
 
     //ADD LINHA DENTRO DA LISTA
@@ -22,11 +22,23 @@ button.addEventListener("click", function (e){
     //LIMPA INPUT AO ENVIAR INPUT
     input.value = "";
 
-    
+    //ADD CHECK NOS ITENS
     linha.addEventListener("click", function(e){
         linha.style.textDecoration = "line-through"
+        linha.style.color = "gray"; 
     })
-    
+
+    const span = document.createElement("span");
+    span.className = "list-tarefas__span"
+    span.innerHTML= `<button class="list-tarefas__botao-excluir">x</button>`
+    console.log(span.innerHTML)
+    span.addEventListener("click", function(event){
+        event.preventDefault();
+        linha.remove()
+    })
+
+    linha.appendChild(span)   
     
 })
+
 
