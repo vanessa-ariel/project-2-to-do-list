@@ -71,6 +71,10 @@ h1{
     padding: 15px;
  
 }
+.list-item.checked{
+    color: gray;
+    text-decoration: line-through;
+}
 .checkbox-container{
     padding-bottom:10px;
     font-weight: bold;

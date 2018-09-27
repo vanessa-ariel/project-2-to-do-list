@@ -33,8 +33,9 @@ button.addEventListener("click", function(e) {
     //ADD CHECK NOS ITENS
     linha.addEventListener("click", function(e) {
         e.preventDefault();
-        linha.style.textDecoration = "line-through"
-        linha.style.color = "gray"
+        
+        //INVERTE AS COISAS ATRAVÉS DA CLASSE QUE PEGOU NO CSS
+        this.classList.toggle("checked");
 
     })
     const span = document.createElement("span");
@@ -55,17 +56,14 @@ button.addEventListener("click", function(e) {
     boxAll.style.display = "flex";
     boxAll.style.justifyContent = "space-around";
 })
-// checkAll.addEventListener("change", function(){
-//     if((this).is(checked)){
-//         console.log("Checou")
-//     }
-// })
+
 checkAll.addEventListener("click", function() {
     const item = document.querySelectorAll(".list-item");
     //FOR PARA RISCAR E MUDAR COR
     for (let checado of item) { // mesma coisa que for normal [array]
-        checado.style.textDecoration = "line-through"
-        checado.style.color = "gray"
+        
+        //INVERTE AS COISAS ATRAVÉS DA CLASSE QUE PEGOU NO CSS
+        checado.classList.toggle("checked");
     }
 })
 // EVENTO CLICK PARA REMOVER HTML E LIMPAR ESTILOS
@@ -73,4 +71,7 @@ deleteAll.addEventListener("click", function() {
     list.innerHTML = ""
     //REMOVER O ESTILO TODA VEZ QUE DELETA
     list.removeAttribute("style");
+    boxAll.style.display = "none";
+    checkAll.checked = false;
+    this.checked = false;
 })
