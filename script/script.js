@@ -1,8 +1,6 @@
 const button = document.querySelector(".btn-tarefas");
 const input = document.querySelector(".form__input");
 const list = document.querySelector(".list-tarefas");
-// const checkAll = document.querySelector(".btn-check-all");
-// const deleteAll = document.querySelector(".btn-delete-all");
 const checkAll = document.querySelector(".checkbox-check-all");
 const deleteAll = document.querySelector(".checkbox-delete-all");
 const boxAll =  document.querySelector(".box-all");
@@ -29,7 +27,6 @@ function toggleCheck(e) {
 button.addEventListener("click", function(e) {
     e.preventDefault();
     //alert("Oi!");
-
 
     if (input.value.length === 0 || !input.value.trim()) {
         alert ("Insira uma tarefa!");
