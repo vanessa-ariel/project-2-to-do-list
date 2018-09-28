@@ -91,6 +91,42 @@ h1{
     border-bottom: 1px solid #d3d3d3;
     margin-top: 10px;
 }
-.input[type="checkbox"]{
-    background-color: palevioletred;
+
+@media (max-width: 1024px){
+
+    .conteiner{
+        width: 70%;
+    }
+    .form__input, .btn-tarefas,.list-item{
+        font-size: 20px;
+    }
+    
+    h1{
+        font-size: 22px;
+    }
+    .box-all{
+        font-size: 18px;
+    }
+    
+    .list-tarefas__botao-excluir{
+        font-size: 20px;
+    }
+}
+@media (max-width: 768px){
+        
+    .conteiner{
+        width: 80%;
+    }     
+}
+@media (max-width: 420px){
+
+    .conteiner{
+        width: 100%;
+    } 
+    h1{
+        font-size: 12px;
+    }
+    .form__input, .btn-tarefas,.list-item, .checkbox-container, .list-tarefas__botao-excluir{
+        font-size: 12px;
+    }
 }

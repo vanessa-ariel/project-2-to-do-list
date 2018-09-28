@@ -75,3 +75,4 @@ deleteAll.addEventListener("click", function() {
     checkAll.checked = false;
     this.checked = false;
 })
+
